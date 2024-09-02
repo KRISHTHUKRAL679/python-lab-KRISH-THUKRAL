@@ -1,5 +1,5 @@
 
-num = 2
+num=int(input("Enter number:"))
 flag = False
 
 if num == 0 or num == 1:
