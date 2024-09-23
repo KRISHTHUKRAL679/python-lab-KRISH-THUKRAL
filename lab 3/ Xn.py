@@ -7,5 +7,4 @@ try:
     result = compute_power(base, exponent)
     
     print(f"{base} raised to the power of {exponent} is {result}")
-except ValueError:
-    print("Invalid input. Please enter numeric values.")
+
