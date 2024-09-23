@@ -1,18 +1,17 @@
-import math
+def factorial(n):
+    fact = 1
+    if n==0 or n==1: return 1
+    for i in range (2,n+1):
+        fact = fact * i
+    return fact
 
-def calculate_nCr(n, r):
-    if r > n:
-        return 0  # nCr is 0 if r > n
-    return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
+def nCr(n,r):
+    num = factorial(n)
+    den = factorial(n-r)*factorial(r)
+    return num/den
 
-try:
-    n = int(input("Enter the value of n: "))
-    r = int(input("Enter the value of r: "))
-    
-    if n < 0 or r < 0:
-        print("n and r must be non-negative integers.")
-    else:
-        result = calculate_nCr(n, r)
-        print(f"The value of {n}C{r} is {result}")
-except ValueError:
-    print("Invalid input. Please enter integer values.")
+n = int(input("enter a number : "))
+r = int(input("enter a number : "))
+
+ans = int(nCr(n,r))
+print(ans)
